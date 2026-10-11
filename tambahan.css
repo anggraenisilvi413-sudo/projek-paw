@@ -1,0 +1,77 @@
+/* Tambahan gaya untuk fitur Tambah Tugas (melengkapi style.css) */
+
+.tugas-judul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.tugas-judul h2 {
+  margin: 0;
+}
+
+.modal {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.5rem 0.75rem;
+  font: inherit;
+  color: var(--teks);
+  background: #fff;
+  border: 1.5px solid var(--garis);
+  border-radius: 6px;
+}
+
+.field textarea {
+  min-height: 5rem;
+  resize: vertical;
+}
+
+.field input:focus-visible,
+.field select:focus-visible,
+.field textarea:focus-visible {
+  outline: 3px solid var(--kuningan);
+  outline-offset: 2px;
+}
+
+.bantuan {
+  margin: 0.3rem 0 0;
+  font-size: 0.85rem;
+  color: var(--teks-redup);
+}
+
+.galat {
+  margin: 0 0 1rem;
+  font-weight: 500;
+  color: var(--merah-teks);
+}
+
+.btn-bahaya {
+  background: transparent;
+  color: var(--merah-teks);
+  border-color: var(--merah-teks);
+}
+
+.btn-bahaya:hover {
+  background: var(--merah-bg);
+  color: var(--merah-teks);
+}
