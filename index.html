@@ -4,28 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ===== METADATA DASAR (WAJIB) ===== -->
-  <title>Silvi Anggraeni | Mahasiswa Informatika UIN Sunan Gunung Djati Bandung</title>
-  <meta name="description" content="Halaman profil diri Silvi Anggraeni, mahasiswa Program Studi Informatika, Fakultas Sains dan Teknologi, UIN Sunan Gunung Djati Bandung.">
+  <!-- ===== METADATA DASAR ===== -->
+  <title>Silvi Anggraeni | Portofolio &amp; Tugas Kuliah Informatika UIN Bandung</title>
+  <meta name="description" content="Portofolio Silvi Anggraeni, mahasiswa Informatika UIN Sunan Gunung Djati Bandung: profil, mata kuliah semester ini, dan daftar pengumpulan tugas kuliah.">
 
-  <!-- ===== OPEN GRAPH METADATA (WAJIB) ===== -->
-  <meta property="og:title" content="Silvi Anggraeni | Profil Diri">
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:title" content="Silvi Anggraeni | Portofolio &amp; Tugas Kuliah">
   <meta property="og:description" content="Mahasiswa Informatika, Fakultas Sains dan Teknologi, UIN Sunan Gunung Djati Bandung.">
   <meta property="og:image" content="images/og-image.jpg">
   <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <a class="skip-link" href="#konten-utama">Lompat ke konten utama</a>
 
   <!-- ===== HEADER ===== -->
   <header class="site-header">
     <div class="container header-inner">
-      <h1 class="site-brand">Halaman Profil Diri</h1>
-      <p>Mahasiswa Teknik Informatika</p>
+      <p class="site-brand">Silvi Anggraeni</p>
       <nav aria-label="Navigasi utama">
         <ul class="nav-list">
           <li><a href="#profil">Profil</a></li>
-          <li><a href="#biodata">Biodata</a></li>
           <li><a href="#matakuliah">Mata Kuliah</a></li>
+          <li><a href="#tugas">Tugas</a></li>
           <li><a href="#kontak">Kontak</a></li>
         </ul>
       </nav>
@@ -33,56 +39,59 @@
   </header>
 
   <!-- ===== MAIN CONTENT ===== -->
-  <main class="container">
+  <main id="konten-utama" class="container">
 
     <!-- SECTION: PROFIL -->
-    <section id="profil" class="section profil-section" aria-labelledby="profil-heading">
-      <h2 id="profil-heading">Hallo Perkenalkan!</h2>
+    <section id="profil" class="section" aria-labelledby="profil-heading">
+      <h1 id="profil-heading">Halaman Profil Diri</h1>
 
       <div class="profil-wrapper">
         <img
-          src="image/foto-silvi.jpg"
+          src="images/foto-silvi.jpg"
           alt="Foto diri Silvi Anggraeni, mahasiswa Program Studi Informatika UIN Sunan Gunung Djati Bandung"
           class="foto-profil"
-          width="150"
-          height="120"
+          width="240"
+          height="300"
         >
 
         <div class="biodata">
-          <h2 id="biodata">Biodata</h2>
-          <table>
-    <tr>
-        <th align="left">Nama</th>
-        <td>&nbsp;&nbsp;&nbsp;&nbsp;Silvi Anggraeni</td>
-    </tr>
-    <tr>
-        <th align="left">NIM</th>
-        <td>&nbsp;&nbsp;&nbsp;&nbsp;1247050035</td>
-    </tr>
-    <tr>
-        <th align="left">Program Studi</th>
-        <td>&nbsp;&nbsp;&nbsp;&nbsp;Informatika</td>
-    </tr>
-    <tr>
-        <th align="left">Semester </th>
-        <td>&nbsp;&nbsp;&nbsp;&nbsp;5</td>
-    </tr>
-    <tr>
-        <th align="left">Fakultas</th>
-        <td>&nbsp;&nbsp;&nbsp;&nbsp;Sains dan Teknologi</td>
-    </tr>
-    <tr>
-        <th align="left">Universitas</th>
-        <td>&nbsp;&nbsp;&nbsp;&nbsp;UIN Sunan Gunung Djati Bandung</td>
-    </tr>
-</table>
-
+          <h2>Biodata</h2>
+          <table class="tabel-biodata">
+            <caption class="sr-only">Biodata Silvi Anggraeni</caption>
+            <tbody>
+              <tr>
+                <th scope="row">Nama</th>
+                <td>Silvi Anggraeni</td>
+              </tr>
+              <tr>
+                <th scope="row">NIM</th>
+                <td>1247050035</td>
+              </tr>
+              <tr>
+                <th scope="row">Program Studi</th>
+                <td>Informatika</td>
+              </tr>
+              <tr>
+                <th scope="row">Fakultas</th>
+                <td>Sains dan Teknologi</td>
+              </tr>
+              <tr>
+                <th scope="row">Universitas</th>
+                <td>UIN Sunan Gunung Djati Bandung</td>
+              </tr>
+              <tr>
+                <th scope="row">Asal</th>
+                <td>Garut</td>
+              </tr>
+            </tbody>
+          </table>
 
           <h3>Tentang Saya</h3>
           <p>
             Saya adalah mahasiswa Program Studi Informatika di Fakultas Sains dan
-            Teknologi, UIN Sunan Gunung Djati Bandung. Saat ini sedang menempuh perkuliahan 
-            sambil mengembangkan kemampuan di bidang pengembangan aplikasi web.
+            Teknologi, UIN Sunan Gunung Djati Bandung. Saya berasal dari Garut dan
+            saat ini sedang menempuh perkuliahan sambil mengembangkan kemampuan di
+            bidang pengembangan aplikasi web.
           </p>
         </div>
       </div>
@@ -90,96 +99,219 @@
 
     <!-- SECTION: MATA KULIAH -->
     <section id="matakuliah" class="section" aria-labelledby="matakuliah-heading">
-      <h2 id="matakuliah-heading">Jadwal Mata Kuliah Semester 5</h2>
-      <p>
-    <strong>Tahun Akademik : </strong> 2026/2027 (Ganjil)
-     </p>
+      <h2 id="matakuliah-heading">Mata Kuliah Semester Ini</h2>
 
-      <table border="1" cellpadding="8" cellspacing="0" width="100%">
-        <colgroup>
-          <col width="6%">
-          <col width="30%">
-          <col width="6%">
-          <col width="25%">
-          <col width="33">
-        </colgroup>
-        <thead>
-          <tr>
-            <th scope="col" align="center">No</th>
-            <th scope="col" align="left">Mata Kuliah</th>
-            <th scope="col" align="center">SKS</th>
-            <th scope="col" align="left">Jadwal</th>
-            <th scope="col" align="center">Dosen Pengampu</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td align="center">1</td>
-            <td align="left">Manajemen Basis Data</td>
-            <td align="center">3</td>
-            <td align="left">Senin 12:40 - 15:10</td>
-            <td align="center">Wildan Budiawan Zulfikar, S.T., M.Kom.</td>
-          </tr>
-          <tr>
-            <td align="center">2</td>
-            <td align="left">Jaringan Komputer</td>
-            <td align="center">3</td>
-            <td align="left">Rabu 07:00 - 09:30</td>
-            <td align="center">Cecep Nurul Alam, M.T.</td>
-          </tr>
-          <tr>
-            <td align="center">3</td>
-            <td align="left">Pengembangan Aplikasi Mobile</td>
-            <td align="center">3</td>
-            <td align="left">Selasa 15:30 - 18:00</td>
-            <td align="center">H. Aldy Rialdy Atmadja, M.T.</td>
-          </tr>
-          <tr>
-            <td align="center">4</td>
-            <td align="left">Pengembangan Aplikasi Web</td>
-            <td align="center">3</td>
-            <td align="left">Jumat 07:00 - 09:30</td>
-            <td align="center">Muhammad Deden Firdaus, ST, M.Kom</td>
-          </tr>
-          <tr>
-            <td align="center">5</td>
-            <td align="left">Interaksi Manusia dan Komputer</td>
-            <td align="center">3</td>
-            <td align="left">Kamis 07:00 - 09:30</td>
-            <td align="center">Dr. Cepy Slamet S.T., M.Kom.</td>
-          </tr>
-          <tr>
-            <td align="center">6</td>
-            <td align="left">Intelegensia Buatan</td>
-            <td align="center">3</td>
-            <td align="left">Jumat 12:40 - 15:10</td>
-            <td align="center">Jumadi ST., M.Cs.</td>
-          </tr>
-          <tr>
-            <td align="center">7</td>
-            <td align="left">Manajemen Proyek Perangkat Lunak</td>
-            <td align="center">3</td>
-            <td align="left">Senin 15:30 - 18:00</td>
-            <td align="center">Agung Wahana S.E., M.T.</td>
-          </tr>
-          <tr>
-            <td align="center">8</td>
-            <td align="left">Kewirausahaan &amp; Etika Bisnis</td>
-            <td align="center">2</td>
-            <td align="left">Selasa 10:20 - 12:00</td>
-            <td align="center">Adam Faroqi ST., MT.</td>
-          </tr>
-        </tbody>
-        <tfoot>
-    <tr>
-        <td></td>
-        <th scope="row" align="center">Jumlah SKS</th>
-        <td align="center">23</td>
-        <td></td>
-        <td></td>
-    </tr>
-</tfoot>
-      </table>
+      <div class="tabel-wrapper" tabindex="0" role="region" aria-label="Tabel mata kuliah (dapat digeser ke samping)">
+        <table class="tabel-matkul">
+          <caption>Daftar mata kuliah yang diambil pada semester berjalan</caption>
+          <thead>
+            <tr>
+              <th scope="col" class="tengah">No</th>
+              <th scope="col">Mata Kuliah</th>
+              <th scope="col" class="tengah">SKS</th>
+              <th scope="col">Dosen Pengampu</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tengah">1</td>
+              <td>Manajemen Basis Data</td>
+              <td class="tengah">3</td>
+              <td>Wildan Budiawan Zulfikar, S.T., M.Kom.</td>
+            </tr>
+            <tr>
+              <td class="tengah">2</td>
+              <td>Jaringan Komputer</td>
+              <td class="tengah">3</td>
+              <td>Cecep Nurul Alam, M.T.</td>
+            </tr>
+            <tr>
+              <td class="tengah">3</td>
+              <td>Pengembangan Aplikasi</td>
+              <td class="tengah">3</td>
+              <td>H. Aldy Rialdy Atmadja, M.T.</td>
+            </tr>
+            <tr>
+              <td class="tengah">4</td>
+              <td>Pengembangan Aplikasi</td>
+              <td class="tengah">3</td>
+              <td>Muhammad Deden Firdaus, ST, M.Kom</td>
+            </tr>
+            <tr>
+              <td class="tengah">5</td>
+              <td>Interaksi Manusia dan Komputer</td>
+              <td class="tengah">3</td>
+              <td>Dr. Cepy Slamet S.T., M.Kom.</td>
+            </tr>
+            <tr>
+              <td class="tengah">6</td>
+              <td>Intelegensia Buatan</td>
+              <td class="tengah">3</td>
+              <td>Jumadi ST., M.Cs.</td>
+            </tr>
+            <tr>
+              <td class="tengah">7</td>
+              <td>Manajemen Proyek</td>
+              <td class="tengah">3</td>
+              <td>Agung Wahana S.E., M.T.</td>
+            </tr>
+            <tr>
+              <td class="tengah">8</td>
+              <td>Kewirausahaan &amp; Etika</td>
+              <td class="tengah">2</td>
+              <td>Adam Faroqi ST., MT.</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td></td>
+              <th scope="row">Jumlah SKS</th>
+              <td class="tengah">23</td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION: PENGUMPULAN TUGAS (ASSIGNMENTS HUB) -->
+    <section id="tugas" class="section" aria-labelledby="tugas-heading">
+      <h2 id="tugas-heading">Pengumpulan Tugas Kuliah</h2>
+      <p class="intro">
+        Daftar tugas semester ini beserta tenggat dan status pengerjaannya.
+        Gunakan tombol filter untuk menampilkan tugas berdasarkan status.
+      </p>
+
+      <!-- Ringkasan jumlah (diisi otomatis oleh script.js) -->
+      <ul class="ringkasan" aria-label="Ringkasan status tugas">
+        <li><strong id="jml-total">0</strong> Total tugas</li>
+        <li><strong id="jml-selesai">0</strong> Sudah dikerjakan</li>
+        <li><strong id="jml-proses">0</strong> Sedang diproses</li>
+        <li><strong id="jml-belum">0</strong> Belum dikerjakan</li>
+      </ul>
+
+      <!-- Filter -->
+      <div class="filter-bar" role="group" aria-label="Filter tugas berdasarkan status">
+        <button type="button" class="filter-btn" data-filter="semua" aria-pressed="true">Semua</button>
+        <button type="button" class="filter-btn" data-filter="selesai" aria-pressed="false">Sudah Dikerjakan</button>
+        <button type="button" class="filter-btn" data-filter="proses" aria-pressed="false">Sedang Diproses</button>
+        <button type="button" class="filter-btn" data-filter="belum" aria-pressed="false">Belum Dikerjakan</button>
+      </div>
+
+      <p id="info-filter" class="info-filter" role="status" aria-live="polite"></p>
+
+      <!--
+        ===== DAFTAR TUGAS =====
+        Untuk menambah tugas: salin satu blok <li class="tugas-item"> lalu ubah isinya.
+        data-status harus salah satu dari: selesai | proses | belum
+        (teks badge di dalam kartu juga disesuaikan).
+      -->
+      <ul class="tugas-list" id="daftar-tugas">
+
+        <li class="tugas-item" data-status="selesai">
+          <article class="tugas-card">
+            <h3>Membuat Halaman Profil Diri dengan HTML5</h3>
+            <p class="matkul">Pengembangan Aplikasi Web</p>
+            <p class="deadline">Tenggat: <time datetime="2026-09-27">27 September 2026</time> <span class="sisa"></span></p>
+            <p><span class="badge badge-selesai">Sudah Dikerjakan</span></p>
+            <p class="deskripsi" hidden>
+              Halaman profil diri satu halaman dengan struktur HTML5 semantik, foto ber-alt,
+              biodata, tabel mata kuliah, tautan, dan metadata Open Graph.
+            </p>
+            <div class="aksi">
+              <button type="button" class="btn btn-ghost" data-detail>Detail</button>
+              <a class="btn" href="index.html">Lihat Tugas</a>
+              <a class="btn btn-outline" href="https://github.com/USERNAME/NAMA-REPO" target="_blank" rel="noopener noreferrer">Link Repository</a>
+            </div>
+          </article>
+        </li>
+
+        <li class="tugas-item" data-status="proses">
+          <article class="tugas-card">
+            <h3>Portofolio &amp; Hub Tugas dengan HTML, CSS, dan JavaScript</h3>
+            <p class="matkul">Pengembangan Aplikasi Web</p>
+            <p class="deadline">Tenggat: <time datetime="2026-10-25">25 Oktober 2026</time> <span class="sisa"></span></p>
+            <p><span class="badge badge-proses">Sedang Diproses</span></p>
+            <p class="deskripsi" hidden>
+              Pengembangan halaman profil menjadi portofolio dengan daftar tugas interaktif:
+              filter status, ringkasan jumlah, dan jendela detail.
+            </p>
+            <div class="aksi">
+              <button type="button" class="btn btn-ghost" data-detail>Detail</button>
+              <a class="btn" href="#tugas">Lihat Tugas</a>
+              <a class="btn btn-outline" href="https://github.com/USERNAME/NAMA-REPO" target="_blank" rel="noopener noreferrer">Link Repository</a>
+            </div>
+          </article>
+        </li>
+
+        <li class="tugas-item" data-status="proses">
+          <article class="tugas-card">
+            <h3>Laporan Praktikum Simulasi Topologi Jaringan</h3>
+            <p class="matkul">Jaringan Komputer</p>
+            <p class="deadline">Tenggat: <time datetime="2026-10-15">15 Oktober 2026</time> <span class="sisa"></span></p>
+            <p><span class="badge badge-proses">Sedang Diproses</span></p>
+            <p class="deskripsi" hidden>
+              Laporan hasil simulasi topologi jaringan beserta analisis konfigurasi perangkat.
+            </p>
+            <div class="aksi">
+              <button type="button" class="btn btn-ghost" data-detail>Detail</button>
+              <span class="btn btn-disabled" aria-disabled="true">Lihat Tugas belum tersedia</span>
+              <a class="btn btn-outline" href="https://github.com/USERNAME/NAMA-REPO" target="_blank" rel="noopener noreferrer">Link Repository</a>
+            </div>
+          </article>
+        </li>
+
+        <li class="tugas-item" data-status="belum">
+          <article class="tugas-card">
+            <h3>Perancangan ERD dan Skema Tabel</h3>
+            <p class="matkul">Manajemen Basis Data</p>
+            <p class="deadline">Tenggat: <time datetime="2026-10-18">18 Oktober 2026</time> <span class="sisa"></span></p>
+            <p><span class="badge badge-belum">Belum Dikerjakan</span></p>
+            <p class="deskripsi" hidden>
+              Merancang Entity Relationship Diagram dan skema tabel untuk studi kasus yang ditentukan dosen.
+            </p>
+            <div class="aksi">
+              <button type="button" class="btn btn-ghost" data-detail>Detail</button>
+              <span class="btn btn-disabled" aria-disabled="true">Lihat Tugas belum tersedia</span>
+            </div>
+          </article>
+        </li>
+
+        <li class="tugas-item" data-status="belum">
+          <article class="tugas-card">
+            <h3>Evaluasi Usability Aplikasi</h3>
+            <p class="matkul">Interaksi Manusia dan Komputer</p>
+            <p class="deadline">Tenggat: <time datetime="2026-10-30">30 Oktober 2026</time> <span class="sisa"></span></p>
+            <p><span class="badge badge-belum">Belum Dikerjakan</span></p>
+            <p class="deskripsi" hidden>
+              Mengevaluasi kegunaan sebuah aplikasi berdasarkan prinsip desain antarmuka dan menuliskan rekomendasi perbaikan.
+            </p>
+            <div class="aksi">
+              <button type="button" class="btn btn-ghost" data-detail>Detail</button>
+              <span class="btn btn-disabled" aria-disabled="true">Lihat Tugas belum tersedia</span>
+            </div>
+          </article>
+        </li>
+
+        <li class="tugas-item" data-status="belum">
+          <article class="tugas-card">
+            <h3>Makalah Penerapan Algoritma Pencarian</h3>
+            <p class="matkul">Intelegensia Buatan</p>
+            <p class="deadline">Tenggat: <time datetime="2026-11-05">5 November 2026</time> <span class="sisa"></span></p>
+            <p><span class="badge badge-belum">Belum Dikerjakan</span></p>
+            <p class="deskripsi" hidden>
+              Makalah singkat tentang penerapan algoritma pencarian dalam kecerdasan buatan beserta contoh kasusnya.
+            </p>
+            <div class="aksi">
+              <button type="button" class="btn btn-ghost" data-detail>Detail</button>
+              <span class="btn btn-disabled" aria-disabled="true">Lihat Tugas belum tersedia</span>
+            </div>
+          </article>
+        </li>
+
+      </ul>
+
+      <p id="kosong" class="kosong" hidden>Tidak ada tugas dengan status ini.</p>
     </section>
 
     <!-- SECTION: KONTAK / LINK -->
@@ -191,19 +323,30 @@
       </p>
       <ul class="daftar-link">
         <li>
-    <a href="https://share.google/XfRrcgMJNRVnZXJYz" target="_blank" rel="noopener noreferrer">
-        Kunjungi profil kampus
-    </a>
-    </li> 
-        <li>
-          <a href="mailto:anggraenisilvi413@gmail.com">
-            anggraenisilvi413@gmail.com
+          <a href="https://share.google/XfRrcgMJNRVnZXJYz" target="_blank" rel="noopener noreferrer">
+            Kunjungi profil kampus
           </a>
+        </li>
+        <li>
+          <a href="mailto:anggraenisilvi413@gmail.com">anggraenisilvi413@gmail.com</a>
         </li>
       </ul>
     </section>
 
   </main>
+
+  <!-- ===== MODAL DETAIL TUGAS ===== -->
+  <dialog id="modal-tugas" class="modal" aria-labelledby="modal-judul">
+    <div class="modal-isi">
+      <button type="button" class="modal-tutup" id="modal-tutup" aria-label="Tutup jendela detail">&times;</button>
+      <h2 id="modal-judul"></h2>
+      <p id="modal-matkul" class="matkul"></p>
+      <p id="modal-status"></p>
+      <p id="modal-deadline" class="deadline"></p>
+      <p id="modal-deskripsi"></p>
+      <div id="modal-aksi" class="aksi"></div>
+    </div>
+  </dialog>
 
   <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
@@ -212,5 +355,6 @@
     </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>

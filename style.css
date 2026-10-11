@@ -1,0 +1,594 @@
+/* =========================================================
+   1. Variabel warna & reset dasar
+   ========================================================= */
+:root {
+  --hijau-tua: #2a3a33;
+  --hijau-sedang: #3d5247;
+  --zaitun: #5c6e46;
+  --pasir: #d6c8ae;
+  --kertas: #f2f0ea;
+  --kertas-gelap: #eae6da;
+  --kartu: #fbfaf6;
+  --garis: #ddd8c9;
+  --teks: #26312b;
+  --teks-redup: #55645a;
+  --kuningan: #8b6f3d;
+
+  --hijau-bg: #dcebd9;
+  --hijau-teks: #1f5130;
+  --merah-bg: #f6d9d5;
+  --merah-teks: #8a1f17;
+  --oranye-bg: #fbe8c4;
+  --oranye-teks: #7a4a00;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--teks);
+  background-color: var(--kertas);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1, h2, h3 {
+  font-family: "Lora", Georgia, "Times New Roman", serif;
+  color: var(--hijau-tua);
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+h1 { font-size: 2rem; margin-bottom: 1.5rem; }
+h2 { font-size: 1.6rem; margin-bottom: 1rem; }
+h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+
+a { color: var(--zaitun); }
+a:hover { color: var(--hijau-tua); }
+
+a:focus-visible,
+button:focus-visible,
+.tabel-wrapper:focus-visible {
+  outline: 3px solid var(--kuningan);
+  outline-offset: 3px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Teks yang hanya terbaca oleh screen reader */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  background: var(--kuningan);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 1rem;
+  color: #fff;
+}
+
+/* =========================================================
+   2. Header & navigasi
+   ========================================================= */
+.site-header {
+  background-color: var(--hijau-tua);
+  color: var(--kertas);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+
+.site-brand {
+  margin: 0;
+  font-family: "Lora", Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  display: inline-block;
+  padding: 0.35rem 0;
+  color: var(--kertas);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-list a:hover,
+.nav-list a.aktif {
+  color: var(--pasir);
+  border-bottom-color: var(--pasir);
+}
+
+.site-header a:focus-visible {
+  outline-color: var(--pasir);
+}
+
+/* =========================================================
+   3. Section umum
+   ========================================================= */
+.section {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--garis);
+  scroll-margin-top: 5.5rem;
+}
+
+.section:last-of-type {
+  border-bottom: none;
+}
+
+.intro {
+  max-width: 62ch;
+  color: var(--teks-redup);
+}
+
+/* =========================================================
+   4. Profil & biodata
+   ========================================================= */
+.profil-wrapper {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.foto-profil {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 4px solid #fff;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(42, 58, 51, 0.15);
+}
+
+.tabel-biodata {
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.tabel-biodata th,
+.tabel-biodata td {
+  text-align: left;
+  padding: 0.35rem 1.25rem 0.35rem 0;
+  vertical-align: top;
+}
+
+.tabel-biodata th {
+  color: var(--teks-redup);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.biodata p {
+  max-width: 62ch;
+  margin: 0;
+}
+
+/* =========================================================
+   5. Tabel mata kuliah
+   ========================================================= */
+.tabel-wrapper {
+  overflow-x: auto;
+}
+
+.tabel-matkul {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+}
+
+.tabel-matkul caption {
+  text-align: left;
+  color: var(--teks-redup);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.tabel-matkul th,
+.tabel-matkul td {
+  padding: 0.7rem 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid var(--garis);
+}
+
+.tabel-matkul thead th {
+  background-color: var(--hijau-tua);
+  color: var(--kertas);
+}
+
+.tabel-matkul tbody tr:nth-child(even) {
+  background-color: var(--kertas-gelap);
+}
+
+.tabel-matkul tfoot th,
+.tabel-matkul tfoot td {
+  font-weight: 600;
+  border-top: 2px solid var(--hijau-tua);
+  border-bottom: none;
+}
+
+.tabel-matkul .tengah {
+  text-align: center;
+}
+
+/* =========================================================
+   6. Pengumpulan tugas (Assignments Hub)
+   ========================================================= */
+.ringkasan {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+  padding: 0;
+}
+
+.ringkasan li {
+  background: var(--kartu);
+  border: 1px solid var(--garis);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: var(--teks-redup);
+}
+
+.ringkasan strong {
+  display: block;
+  font-family: "Lora", Georgia, serif;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  color: var(--hijau-tua);
+}
+
+/* Filter */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-btn {
+  font: inherit;
+  font-weight: 500;
+  min-height: 44px;
+  padding: 0.4rem 1.1rem;
+  background: transparent;
+  color: var(--hijau-tua);
+  border: 1.5px solid var(--hijau-tua);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  background: var(--kertas-gelap);
+}
+
+.filter-btn[aria-pressed="true"] {
+  background: var(--hijau-tua);
+  color: var(--kertas);
+}
+
+.info-filter {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  color: var(--teks-redup);
+}
+
+/* Daftar kartu */
+.tugas-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 1.25rem;
+}
+
+.tugas-item[hidden] {
+  display: none;
+}
+
+.tugas-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--kartu);
+  border: 1px solid var(--garis);
+  border-left-width: 5px;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.tugas-item[data-status="selesai"] .tugas-card { border-left-color: #3f8a55; }
+.tugas-item[data-status="proses"]  .tugas-card { border-left-color: #d98a0b; }
+.tugas-item[data-status="belum"]   .tugas-card { border-left-color: #c2382d; }
+
+.matkul {
+  margin: 0 0 0.75rem;
+  color: var(--teks-redup);
+  font-size: 0.95rem;
+}
+
+.deadline {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+}
+
+.sisa {
+  color: var(--teks-redup);
+  font-size: 0.85rem;
+}
+
+.tugas-card p:has(.badge) {
+  margin: 0 0 1rem;
+}
+
+/* Badge status */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badge::before {
+  content: "";
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.badge-selesai { background: var(--hijau-bg);  color: var(--hijau-teks); }
+.badge-belum   { background: var(--merah-bg);  color: var(--merah-teks); }
+.badge-proses  { background: var(--oranye-bg); color: var(--oranye-teks); }
+
+/* Tombol */
+.aksi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.4rem 1rem;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: var(--hijau-tua);
+  color: var(--kertas);
+  border: 1.5px solid var(--hijau-tua);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--hijau-sedang);
+  color: #fff;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--hijau-tua);
+}
+
+.btn-outline:hover {
+  background: var(--kertas-gelap);
+  color: var(--hijau-tua);
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--zaitun);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.btn-ghost:hover {
+  background: var(--kertas-gelap);
+  color: var(--hijau-tua);
+}
+
+.btn-disabled {
+  background: var(--kertas-gelap);
+  border-color: var(--garis);
+  color: var(--teks-redup);
+  cursor: not-allowed;
+  font-weight: 500;
+}
+
+.kosong {
+  padding: 2rem;
+  text-align: center;
+  color: var(--teks-redup);
+  border: 1.5px dashed var(--garis);
+  border-radius: 8px;
+}
+
+/* =========================================================
+   7. Modal detail
+   ========================================================= */
+.modal {
+  width: min(560px, calc(100% - 2rem));
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  background: var(--kartu);
+  color: var(--teks);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.modal::backdrop {
+  background: rgba(42, 58, 51, 0.6);
+}
+
+.modal-isi {
+  position: relative;
+  padding: 2rem 1.5rem 1.5rem;
+}
+
+.modal-isi h2 {
+  padding-right: 2.5rem;
+  font-size: 1.4rem;
+}
+
+.modal-tutup {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 44px;
+  height: 44px;
+  font-size: 1.75rem;
+  line-height: 1;
+  background: transparent;
+  color: var(--hijau-tua);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modal-tutup:hover {
+  background: var(--kertas-gelap);
+}
+
+.modal .aksi {
+  margin-top: 1.5rem;
+}
+
+/* =========================================================
+   8. Kontak & footer
+   ========================================================= */
+.daftar-link {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.daftar-link li {
+  margin-bottom: 0.4rem;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.85rem;
+  color: var(--teks-redup);
+  border-top: 1px solid var(--garis);
+}
+
+/* =========================================================
+   9. Responsif
+   ========================================================= */
+@media (max-width: 720px) {
+  .ringkasan {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section {
+    padding: 2rem 0;
+    scroll-margin-top: 7rem;
+  }
+
+  h1 { font-size: 1.6rem; }
+
+  .profil-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .foto-profil {
+    width: 180px;
+  }
+
+  .tugas-list {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-btn {
+    flex: 1 1 auto;
+  }
+}
+
+/* =========================================================
+   10. Preferensi pengguna: kurangi animasi
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
