@@ -7,8 +7,8 @@
   'use strict';
 
   // ====== ISI DUA BARIS INI (Supabase > Project Settings > API) ======
-  var SUPABASE_URL = 'https://XXXX.supabase.co';
-  var SUPABASE_KEY = 'ISI-ANON-ATAU-PUBLISHABLE-KEY';
+  var SUPABASE_URL = 'https://jjxahmueunzlczoqcdlw.supabase.co';
+  var SUPABASE_KEY = 'sb_publishable_vvJumH2X4I9a0h6OkLoY5Q_y-DAT-4Q';
   // ===================================================================
 
   var BUCKET = 'berkas-tugas';
